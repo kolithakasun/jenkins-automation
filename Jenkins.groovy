@@ -17,7 +17,7 @@ pipeline {
         stage('Execute Script') {
             steps {
                 sh "pip3 install -r requirement.txt"
-                sh "python3 file_upload.py DasanayakeDMMK@mahamalage.com Kasun@123 $FILE_NAME"
+                sh "python3 file_upload.py $USER_CREDENTIALS_USR $USER_CREDENTIALS_PSW $FILE_NAME"
             }
         }
     }
